@@ -1,0 +1,22 @@
+{
+  "name": "mountebank-ws",
+  "version": "1.0.0",
+  "description": "Websocket protocol for mountebank",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "mb-ws.js",
+  "bin": {
+    "mb-ldap": "./mb-ws.js"
+  },
+  "author": "Vamsidhar Bethanabatla",
+  "license": "MIT",
+  "devDependencies": {
+    "mountebank": "^2.2.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "ws": "^7.2.5"
+  }
+}

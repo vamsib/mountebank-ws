@@ -1,0 +1,79 @@
+{
+  "imposters": [
+    {
+      "port": 3898,
+      "protocol": "ws",
+      "stubs": [
+        {
+          "predicates": [
+            {
+              "equals": {
+                "message": "foo"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": "bar"
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "message": "bar"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": "baz"
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "message": "start_ticker"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "__MB_CUSTOM_RESPONSE": {
+                  "command": "start_stream",
+                  "source": "random_price",
+                  "interval": 10,
+                  "id": "price"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "message": "stop_ticker"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "__MB_CUSTOM_RESPONSE": {
+                  "command": "stop_stream",
+                  "id": "price"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

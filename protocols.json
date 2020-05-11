@@ -1,0 +1,6 @@
+{
+  "ws": {
+    "createCommand": "node ./mb-ws.js"
+  }
+}
+
