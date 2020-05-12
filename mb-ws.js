@@ -20,12 +20,17 @@ if (require.main === module) {
     port: config.port
   });
 
-  ws.on('connection', function open(ws) {
+  ws.on('connection', function open(ws, request) {
     let interval = {};
     ws.on('message', function incoming(data) {
+      const wsReq = {
+        request: Object.assign({}, request, {
+          message: data
+        })
+      };
       fetch(config.callbackURL, {
         method: 'post',
-        body: JSON.stringify({request: {message: data}}),
+        body: JSON.stringify(wsReq),
         headers: {'Content-Type': 'application/json'},
       }).then(res => res.json()).then(json => {
         const isCustomResponse = undefined !== typeof json.response.__MB_CUSTOM_RESPONSE;

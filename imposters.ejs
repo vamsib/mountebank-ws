@@ -8,6 +8,21 @@
           "predicates": [
             {
               "equals": {
+                "url": "/foo",
+                "message": "foo"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": "foobar"
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
                 "message": "foo"
               }
             }
@@ -46,7 +61,7 @@
                 "__MB_CUSTOM_RESPONSE": {
                   "command": "start_stream",
                   "source": "random_price",
-                  "interval": 10,
+                  "interval": 1000,
                   "id": "price"
                 }
               }
