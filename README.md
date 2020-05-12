@@ -72,7 +72,7 @@ Client sends a request (subscribe). Server starts streaming responses. Client ca
 
 ## Acknowledgements
 
-Max Ludwig's [LDAP plugin](https://gitlab.com/dAnjou/mountebank-ldap) implementation was a great help for me to get started.
+Thanks to Max Ludwig. [LDAP plugin](https://gitlab.com/dAnjou/mountebank-ldap) implementation was a great help for me to get started.
 
 ## License
 
