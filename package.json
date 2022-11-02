@@ -13,7 +13,7 @@
   "author": "Vamsidhar Bethanabatla",
   "license": "MIT",
   "devDependencies": {
-    "mountebank": "^2.2.1"
+    "mountebank": "^2.8.1"
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
